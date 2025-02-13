@@ -9,21 +9,33 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: start; /* Asegura que el contenido se alinee a la izquierda */
+    padding: 10px 20px;
     background-color: #a63d2e;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+main {
+    padding-top: 80px; /* Ajusta según la altura del header */
 }
 
 .logo img {
     height: 50px;
+    margin-right: 20px; /* Espacio entre el logo y el menú */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li a {
@@ -39,6 +51,10 @@ header {
 
 .menu-hamburguesa {
     display: none;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1100; /* Más alto que el header para evitar solapamientos */
 }
 
 /* Secciones */
@@ -49,8 +65,7 @@ section {
 
 /* Página de inicio */
 #inicio {
-    background: url('../img/banner.jpg') no-repeat center center/cover;
-    color: white;
+    color: #5c3d2e;
     padding: 100px 20px;
 }
 
@@ -132,15 +147,55 @@ section {
 
 /* EStilos para teléfono */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        position: fixed;
+        top: 80px; /* Justo debajo del header */
+        left: 50%; /* Centrar horizontalmente */
+        transform: translateX(-50%); /* Asegura el centrado */
+        display: none; /* Oculto por defecto */
+        width: 90%;
+        background: #a63d2e; /* Gris oscuro para mejor contraste */
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+    .nav-links.active {
+        display: flex; /* Aparece cuando se activa */
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 20px;
+        display: block;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
     .menu-hamburguesa {
         display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: black; /* Icono negro */
+        padding: 10px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
+    /* Sección de catálogo */
     .productos-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Ajuste del header en móviles */
+    header {
+        justify-content: space-between; /* Logo a la izquierda, menú hamburguesa a la derecha */
     }
 }

@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Fresas con Chocolate Blanco",
+        "descripcion": "Fresas frescas cubiertas con delicioso chocolate blanco.",
+        "imagen": "assets/img/productos/fresas_choco_blanco.jpg",
+        "precio": 50,
+        "categoria": "Fresas"
+    },
+    {
+        "nombre": "Fresas con Chocolate Oscuro",
+        "descripcion": "Fresas cubiertas con chocolate oscuro premium.",
+        "imagen": "assets/img/productos/fresas_choco_obscuro.jpeg",
+        "precio": 55,
+        "categoria": "Fresas"
+    },
+    {
+        "nombre": "Caja de Bombones",
+        "descripcion": "Selección especial de bombones rellenos con distintos sabores.",
+        "imagen": "assets/img/productos/caja_bombones.jpg",
+        "precio": 80,
+        "categoria": "Bombones"
+    },
+    {
+        "nombre": "Mix de Trufas",
+        "descripcion": "Trufas de chocolate con diferentes sabores y decoraciones.",
+        "imagen": "assets/img/productos/mix_trufas.jpg",
+        "precio": 70,
+        "categoria": "Trufas"
+    }
+]

@@ -1,10 +1,15 @@
 /* Estilos generales */
-body {
+html, body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff8f0;
     color: #5c3d2e;
+
+    height: 100%;
+    margin: 0; /* Elimina el margen por defecto */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
 }
 
 header {
@@ -23,6 +28,7 @@ header {
 
 main {
     padding-top: 80px; /* Ajusta según la altura del header */
+    flex-grow: 1;
 }
 
 .logo img {
@@ -94,7 +100,8 @@ section {
 
 .producto img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Todas tendrán la misma altura */
+    object-fit: cover; /* Recorta la imagen sin distorsionarla */
     border-radius: 10px;
 }
 
@@ -143,6 +150,15 @@ section {
 
 #contacto a:hover {
     text-decoration: underline;
+}
+
+footer {
+    background-color: #fff8f0; /* Fondo gris claro, puedes cambiarlo */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espacio arriba y abajo */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    position: relative;
+    bottom: 0;
 }
 
 /* EStilos para teléfono */

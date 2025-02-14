@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h2>${producto.nombre}</h2>
                     <p>${producto.descripcion}</p>
                     <p class="precio">Q${producto.precio}.00</p>
-                    <button class="btn-comprar">Comprar</button>
                 `;
                 productosContainer.appendChild(productoDiv);
             });
